@@ -1,6 +1,5 @@
 - id: pre-commit-consolelog
   name: Check for console.log statements
-  decsription: Checks for console.log statements and fails if any are found
   entry: hooks/pre-commit-consolelog
   language: script
   types:

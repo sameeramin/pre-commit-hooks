@@ -8,7 +8,8 @@ To use these hooks, you need to install the `pre-commit` framework. See [here](h
 ### console.log detector
 This hook detects `console.log` statements in your code. If it finds any, it will fail the commit.
 ```yaml
-- repo: local
-    hooks:
-        - id: console-log-detector
+- repo: https://github.com/sameeramin/pre-commit-hooks.git
+      rev: v1.0.0
+      hooks:
+          - id: pre-commit-consolelog
 ```
