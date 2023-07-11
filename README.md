@@ -9,7 +9,7 @@ To use these hooks, you need to install the `pre-commit` framework. See [here](h
 This hook detects `console.log` statements in your code. If it finds any, it will fail the commit.
 ```yaml
 - repo: https://github.com/sameeramin/pre-commit-hooks.git
-      rev: v1.0.0
+      rev: v1.0.1
       hooks:
-          - id: pre-commit-consolelog
+          - id: check-console-log
 ```

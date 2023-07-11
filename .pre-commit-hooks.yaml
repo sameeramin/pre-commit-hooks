@@ -1,6 +1,6 @@
-- id: pre-commit-consolelog
+- id: check-console-log
   name: Check for console.log statements
-  entry: hooks/pre-commit-consolelog
+  entry: hooks/check-console-log
   language: script
   types:
     - javascript
