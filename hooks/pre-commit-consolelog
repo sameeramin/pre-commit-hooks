@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Redirect output to stderr.
+exec 1>&2
+# enable user input
+exec < /dev/tty
+
+# search for 'console.log(' in added files
+consoleregexp='^\+.*console\.log\('
+
+if test `git diff --cached | egrep $consoleregexp | wc -l` != 0
+then
+  exec git diff --cached | egrep "($consoleregexp|\+{3})"
+    echo "There are some console.log calls in the diff."
+    echo "Please remove or comment out console.log statements before committing."
+    exit 1
+fi
